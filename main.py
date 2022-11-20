@@ -34,30 +34,27 @@ class FirstPage(QWidget):
     # UI 설정
     def initUI(self):
 
-        # title 부분 UI
-        hTopBox = QHBoxLayout()
-        titleLbl = QLabel('MBTI 검사지(미정)')
-        hTopBox.addStretch(1)
-        hTopBox.addWidget(titleLbl)
-        hTopBox.addStretch(1)
-
-        # 학번, 이름 입력 칸 UI
-        hMiddle1Box = QHBoxLayout()
-        numberLbl = QLabel('학번: ')
-        self.numberEdit = QLineEdit()
-        hMiddle1Box.addStretch(1)
-        hMiddle1Box.addWidget(numberLbl)
-        hMiddle1Box.addWidget(self.numberEdit)
-        hMiddle1Box.addStretch(1)
-
-        hMiddle2Box = QHBoxLayout()
-        nameLbl = QLabel('이름: ')
-        self.nameEdit = QLineEdit()
-        hMiddle2Box.addStretch(1)
-        hMiddle2Box.addWidget(nameLbl)
-        hMiddle2Box.addWidget(self.nameEdit)
-        hMiddle2Box.addStretch(1)
         
+        hTopBox = QHBoxLayout()
+        hMiddle1Box = QHBoxLayout()
+        hMiddle2Box = QHBoxLayout()
+
+        self.numberEdit = QLineEdit()
+        self.nameEdit = QLineEdit()
+
+        uiGroups = {
+            'title' : {'layout': hTopBox, 'widget': [QLabel('MBTI 검사지(미정)')]},
+            'number' : {'layout': hMiddle1Box, 'widget': [QLabel('학번: '), self.numberEdit]},
+            'name': {'layout': hMiddle2Box, 'widget': [QLabel('이름: '), self.nameEdit]}
+        }
+
+        for label in uiGroups.keys():
+            layout = uiGroups[label]['layout']
+            layout.addStretch(1)
+            for widget in uiGroups[label]['widget']:
+                layout.addWidget(widget)
+            layout.addStretch(1)
+
         # 다음 페이지 버튼 UI
         hBttomBox = QHBoxLayout()
         nextPageBtn = QPushButton("next")
@@ -78,6 +75,7 @@ class FirstPage(QWidget):
         vBox.addLayout(hMiddle2Box)
         vBox.addStretch(1)
         vBox.addLayout(hBttomBox)
+        
 
         self.setLayout(vBox)
 
