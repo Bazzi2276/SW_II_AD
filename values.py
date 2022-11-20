@@ -55,9 +55,14 @@ class Values:
 
         for name, mbti in self.celebrityMBTI.items():
             self.savedMBTI[mbti]["연예인"].add(name)
-
-        with open('studentMBTI.txt', 'rb') as f:
-            self.studentMBTI = pickle.load(f)
+            
+        try:
+            with open('studentMBTI.txt', 'rb') as f:
+                self.studentMBTI = pickle.load(f)
+        except FileNotFoundError as f:
+            f = open("studentMBTI.txt", 'w')
+            f.close()
+            self.studentMBTI = {}
     
         for name, mbti in self.studentMBTI.items():
             self.savedMBTI[mbti]["학생"].add(name)
