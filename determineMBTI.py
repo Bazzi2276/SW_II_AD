@@ -1,4 +1,4 @@
-class determineMBTI:
+class DetermineMBTI:
 
     def __init__(self):
         self.sum1 = 0   #E,I

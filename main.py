@@ -1,9 +1,11 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QLineEdit, QRadioButton
+from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QLineEdit, QRadioButton, QButtonGroup
 from PyQt5.QtCore import QSize
 from qt_material import apply_stylesheet
 
 from questions import Question
+from determineMBTI import DetermineMBTI
+from values import Values
 
 class Main(QStackedWidget):
     def __init__(self):
@@ -25,6 +27,8 @@ class Main(QStackedWidget):
         self.addWidget(firstPage)
         secondPage = SecondPage()
         self.addWidget(secondPage)
+        self.thirdPage = ThirdPage()
+        self.addWidget(self.thirdPage)
 
 class FirstPage(QWidget):
     def __init__(self):
@@ -57,7 +61,7 @@ class FirstPage(QWidget):
 
         # 다음 페이지 버튼 UI
         hBttomBox = QHBoxLayout()
-        nextPageBtn = QPushButton("next")
+        nextPageBtn = QPushButton("시작하기")
         # nextPageBtn.setStyleSheet("color: blue;"
         #                       "background-color: #87CEFA;"
         #                       "border-style: dashed;"
@@ -87,74 +91,168 @@ class SecondPage(QWidget):
     def __init__(self):
         super().__init__()
         self.question = Question()
+        self.determineMBTI = DetermineMBTI()
         self.initUI()
         
     def initUI(self):
 
         vBox = QVBoxLayout()
 
-        q1Lbl = QLabel(self.question.getQuestion())
+        #첫 번째 질문과 버튼들
+        self.q1LblIdx = self.question.getQuestionIdx()
+        self.q1Lbl = QLabel(self.question.getQuestion())
 
-        hTopBox = QHBoxLayout()
-        y1Lbl = QLabel('동의')
+        h1Box = QHBoxLayout()
+        y1Lbl = QLabel('비동의')
         q1Btn1 = QRadioButton()
         q1Btn2 = QRadioButton()
         q1Btn3 = QRadioButton()
         q1Btn4 = QRadioButton()
         q1Btn5 = QRadioButton()
-        n1Lbl = QLabel('비동의')
-        hTopBox.addWidget(y1Lbl)
-        hTopBox.addWidget(q1Btn1)
-        hTopBox.addWidget(q1Btn2)
-        hTopBox.addWidget(q1Btn3)
-        hTopBox.addWidget(q1Btn4)
-        hTopBox.addWidget(q1Btn5)
-        hTopBox.addWidget(n1Lbl)
+        self.q1group = QButtonGroup(self)
+        self.q1group.addButton(q1Btn1, 0)
+        self.q1group.addButton(q1Btn2, 1)
+        self.q1group.addButton(q1Btn3, 2)
+        self.q1group.addButton(q1Btn4, 3)
+        self.q1group.addButton(q1Btn5, 4)
+        n1Lbl = QLabel('동의')
+        h1Box.addWidget(y1Lbl)
+        h1Box.addWidget(q1Btn1)
+        h1Box.addWidget(q1Btn2)
+        h1Box.addWidget(q1Btn3)
+        h1Box.addWidget(q1Btn4)
+        h1Box.addWidget(q1Btn5)
+        h1Box.addWidget(n1Lbl)
 
-        q2Lbl = QLabel(self.question.getQuestion())
+        #두 번째 질문과 버튼들
+        self.q2LblIdx = self.question.getQuestionIdx()
+        self.q2Lbl = QLabel(self.question.getQuestion())
 
-        hMiddleBox = QHBoxLayout()
-        y2Lbl = QLabel('동의')
+        h2Box = QHBoxLayout()
+        y2Lbl = QLabel('비동의')
         q2Btn1 = QRadioButton()
         q2Btn2 = QRadioButton()
         q2Btn3 = QRadioButton()
         q2Btn4 = QRadioButton()
         q2Btn5 = QRadioButton()
-        n2Lbl = QLabel('비동의')
-        hMiddleBox.addWidget(y2Lbl)
-        hMiddleBox.addWidget(q2Btn1)
-        hMiddleBox.addWidget(q2Btn2)
-        hMiddleBox.addWidget(q2Btn3)
-        hMiddleBox.addWidget(q2Btn4)
-        hMiddleBox.addWidget(q2Btn5)
-        hMiddleBox.addWidget(n2Lbl)
+        self.q2group = QButtonGroup(self)
+        self.q2group.addButton(q2Btn1, 0)
+        self.q2group.addButton(q2Btn2, 1)
+        self.q2group.addButton(q2Btn3, 2)
+        self.q2group.addButton(q2Btn4, 3)
+        self.q2group.addButton(q2Btn5, 4)
+        n2Lbl = QLabel('동의')
+        h2Box.addWidget(y2Lbl)
+        h2Box.addWidget(q2Btn1)
+        h2Box.addWidget(q2Btn2)
+        h2Box.addWidget(q2Btn3)
+        h2Box.addWidget(q2Btn4)
+        h2Box.addWidget(q2Btn5)
+        h2Box.addWidget(n2Lbl)
 
-        q3Lbl = QLabel(self.question.getQuestion())  
+        #세 번째 질문과 버튼들
+        self.q3LblIdx = self.question.getQuestionIdx()
+        self.q3Lbl = QLabel(self.question.getQuestion())  
 
-        hBottomBox = QHBoxLayout()
-        y3Lbl = QLabel('동의')
+        h3Box = QHBoxLayout()
+        y3Lbl = QLabel('비동의')
         q3Btn1 = QRadioButton()
         q3Btn2 = QRadioButton()
         q3Btn3 = QRadioButton()
         q3Btn4 = QRadioButton()
         q3Btn5 = QRadioButton()
-        n3Lbl = QLabel('비동의')
-        hBottomBox.addWidget(y3Lbl)
-        hBottomBox.addWidget(q3Btn1)
-        hBottomBox.addWidget(q3Btn2)
-        hBottomBox.addWidget(q3Btn3)
-        hBottomBox.addWidget(q3Btn4)
-        hBottomBox.addWidget(q3Btn5)
-        hBottomBox.addWidget(n3Lbl)     
+        self.q3group = QButtonGroup(self)
+        self.q3group.addButton(q3Btn1, 0)
+        self.q3group.addButton(q3Btn2, 1)
+        self.q3group.addButton(q3Btn3, 2)
+        self.q3group.addButton(q3Btn4, 3)
+        self.q3group.addButton(q3Btn5, 4)
+        n3Lbl = QLabel('동의')
+        h3Box.addWidget(y3Lbl)
+        h3Box.addWidget(q3Btn1)
+        h3Box.addWidget(q3Btn2)
+        h3Box.addWidget(q3Btn3)
+        h3Box.addWidget(q3Btn4)
+        h3Box.addWidget(q3Btn5)
+        h3Box.addWidget(n3Lbl) 
+
+        # next 페이지 버튼 UI
+        hBttomBox = QHBoxLayout()
+        nextPageBtn = QPushButton("next")
+        nextPageBtn.clicked.connect(self.clickedNextButton)
+        hBttomBox.addStretch(1)
+        hBttomBox.addWidget(nextPageBtn)
         
-        vBox.addWidget(q1Lbl)
-        vBox.addLayout(hTopBox)
-        vBox.addWidget(q2Lbl)
-        vBox.addLayout(hMiddleBox)
-        vBox.addWidget(q3Lbl)
-        vBox.addLayout(hBottomBox)
+        vBox.addWidget(self.q1Lbl)
+        vBox.addLayout(h1Box)
+        vBox.addWidget(self.q2Lbl)
+        vBox.addLayout(h2Box)
+        vBox.addWidget(self.q3Lbl)
+        vBox.addLayout(h3Box)
+        vBox.addLayout(hBttomBox)
 
         self.setLayout(vBox)
+    
+    def clickedNextButton(self):
+
+
+        # 모든 설문지를 완성했을 때 다음 페이지로 넘어가기 위한 설정
+        if self.question.getQuestionIdx() == 48:
+            main.thirdPage.setMBTI(self.determineMBTI.mbtiCalc())
+            main.setCurrentIndex(main.currentIndex()+1) 
+            return
+        
+        # 모든 항목을 체크했을 때 다음 페이지로 넘어가게 하기 위한 설정
+        if self.q1group.checkedButton() == None or self.q2group.checkedButton() == None or self.q3group.checkedButton() == None:
+            return
+
+        # 현재 페이지의 질문 결과 저장
+        self.determineMBTI.mbtiSum(self.q1LblIdx, self.q1group.checkedId())
+        self.determineMBTI.mbtiSum(self.q2LblIdx, self.q2group.checkedId())
+        self.determineMBTI.mbtiSum(self.q3LblIdx, self.q3group.checkedId())
+
+        # 버튼 리셋
+        self.q1group.setExclusive(False)
+        self.q2group.setExclusive(False)
+        self.q3group.setExclusive(False) 
+        self.q1group.checkedButton().setChecked(False)
+        self.q2group.checkedButton().setChecked(False)
+        self.q3group.checkedButton().setChecked(False) 
+        self.q1group.setExclusive(True)
+        self.q2group.setExclusive(True)
+        self.q3group.setExclusive(True) 
+
+        
+        # 질문지 업데이트
+        self.q1LblIdx = self.question.getQuestionIdx()
+        self.q1Lbl.setText(self.question.getQuestion())
+        self.q2LblIdx = self.question.getQuestionIdx()
+        self.q2Lbl.setText(self.question.getQuestion())
+        self.q3LblIdx = self.question.getQuestionIdx()
+        self.q3Lbl.setText(self.question.getQuestion())
+
+class ThirdPage(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.mbti = ''
+        self.initUI()
+
+    def initUI(self):
+        
+        whatmbitLbl = QLabel("당신의 성격 유형은: ")
+        print(self.mbti)
+        self.mbtiLbl = QLabel(self.mbti)
+
+        vBox = QVBoxLayout()
+        vBox.addWidget(whatmbitLbl)
+        vBox.addWidget(self.mbtiLbl)
+
+        self.setLayout(vBox)
+
+    def setMBTI(self, mbti):
+        self.mbti = mbti
+        self.mbtiLbl.setText(self.mbti)
+
 
 
 if __name__ == "__main__":

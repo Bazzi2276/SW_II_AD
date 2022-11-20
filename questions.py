@@ -59,7 +59,10 @@ class Question:
     def __init__(self):
         self.index = 0
 
-    def getQuestion(self):
+    def getQuestion(self):      
         question = self.questions[self.index]
         self.index += 1
         return question
+
+    def getQuestionIdx(self):
+        return self.index
