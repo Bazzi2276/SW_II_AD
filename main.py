@@ -84,7 +84,10 @@ class FirstPage(QWidget):
         self.setLayout(vBox)
 
     def secondPage(self):
+        if self.nameEdit.text() == '' or self.numberEdit.text() == '' :
+            return
         main.setCurrentIndex(main.currentIndex()+1) 
+        main.thirdPage.setNameNumber(self.nameEdit.text(), self.numberEdit.text())
 
 class SecondPage(QWidget):
 
@@ -212,15 +215,15 @@ class SecondPage(QWidget):
         self.determineMBTI.mbtiSum(self.q3LblIdx, self.q3group.checkedId())
 
         # 버튼 리셋
-        self.q1group.setExclusive(False)
-        self.q2group.setExclusive(False)
-        self.q3group.setExclusive(False) 
-        self.q1group.checkedButton().setChecked(False)
-        self.q2group.checkedButton().setChecked(False)
-        self.q3group.checkedButton().setChecked(False) 
-        self.q1group.setExclusive(True)
-        self.q2group.setExclusive(True)
-        self.q3group.setExclusive(True) 
+        # self.q1group.setExclusive(False)
+        # self.q2group.setExclusive(False)
+        # self.q3group.setExclusive(False) 
+        # self.q1group.checkedButton().setChecked(False)
+        # self.q2group.checkedButton().setChecked(False)
+        # self.q3group.checkedButton().setChecked(False) 
+        # self.q1group.setExclusive(True)
+        # self.q2group.setExclusive(True)
+        # self.q3group.setExclusive(True) 
 
         
         # 질문지 업데이트
@@ -235,23 +238,35 @@ class ThirdPage(QWidget):
     def __init__(self):
         super().__init__()
         self.mbti = ''
+        self.name = ''
+        self.number = ''
         self.initUI()
 
     def initUI(self):
         
-        whatmbitLbl = QLabel("당신의 성격 유형은: ")
-        print(self.mbti)
+        hBox = QHBoxLayout()
+        self.nameLbl = QLabel(self.name)
+        whatmbitLbl = QLabel("님의 성격 유형은: ")
+        hBox.addWidget(self.nameLbl)
+        hBox.addWidget(whatmbitLbl)
+
         self.mbtiLbl = QLabel(self.mbti)
 
         vBox = QVBoxLayout()
-        vBox.addWidget(whatmbitLbl)
+        vBox.addLayout(hBox)
         vBox.addWidget(self.mbtiLbl)
 
         self.setLayout(vBox)
 
+
     def setMBTI(self, mbti):
         self.mbti = mbti
         self.mbtiLbl.setText(self.mbti)
+    
+    def setNameNumber(self, name, number):
+        self.name = name
+        self.number = number
+        self.nameLbl.setText(self.name)
 
 
 
