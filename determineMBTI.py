@@ -19,22 +19,22 @@ class DetermineMBTI:
 
 
     def mbtiCalc(self):
-        if(self.sum1 > 30):
+        if(self.sum1 > 26):
             self.mbti += "E"
         else:
             self.mbti += "I"
 
-        if(self.sum2 > 30):
+        if(self.sum2 > 26):
             self.mbti += "N"
         else:
             self.mbti +="S"
 
-        if(self.sum3 > 30):
+        if(self.sum3 > 26):
             self.mbti += "T"
         else:
             self.mbti += "F"
 
-        if(self.sum4 > 30):
+        if(self.sum4 > 26):
             self.mbti += "J"
         else:
             self.mbti += "P"
