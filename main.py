@@ -23,14 +23,16 @@ class Main(QStackedWidget):
     
     # stack에 다른 페이지들 추가
     def add(self):
-        firstPage = FirstPage()
-        self.addWidget(firstPage)
-        secondPage = SecondPage()
-        self.addWidget(secondPage)
-        self.thirdPage = ThirdPage()
-        self.addWidget(self.thirdPage)
+        namePage = NamePage()
+        self.addWidget(namePage)
+        questionPage = QuestionPage()
+        self.addWidget(questionPage)
+        self.agreementPage = AgreementPage()
+        self.addWidget(self.agreementPage)
+        self.resultPage = ResultPage()
+        self.addWidget(self.resultPage)
 
-class FirstPage(QWidget):
+class NamePage(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -67,7 +69,7 @@ class FirstPage(QWidget):
         #                       "border-style: dashed;"
         #                       "border-width: 3px;"
         #                       "border-color: #1E90FF")
-        nextPageBtn.clicked.connect(self.secondPage)
+        nextPageBtn.clicked.connect(self.questionPage)
         hBttomBox.addStretch(1)
         hBttomBox.addWidget(nextPageBtn)
 
@@ -83,13 +85,13 @@ class FirstPage(QWidget):
 
         self.setLayout(vBox)
 
-    def secondPage(self):
+    def questionPage(self):
         if self.nameEdit.text() == '' or self.numberEdit.text() == '' :
             return
         main.setCurrentIndex(main.currentIndex()+1) 
-        main.thirdPage.setNameNumber(self.nameEdit.text(), self.numberEdit.text())
+        main.resultPage.setNameNumber(self.nameEdit.text(), self.numberEdit.text())
 
-class SecondPage(QWidget):
+class QuestionPage(QWidget):
 
     def __init__(self):
         super().__init__()
@@ -201,7 +203,7 @@ class SecondPage(QWidget):
 
         # 모든 설문지를 완성했을 때 다음 페이지로 넘어가기 위한 설정
         if self.question.getQuestionIdx() == 48:
-            main.thirdPage.setMBTI(self.determineMBTI.mbtiCalc())
+            main.resultPage.setMBTI(self.determineMBTI.mbtiCalc())
             main.setCurrentIndex(main.currentIndex()+1) 
             return
         
@@ -234,7 +236,49 @@ class SecondPage(QWidget):
         self.q3LblIdx = self.question.getQuestionIdx()
         self.q3Lbl.setText(self.question.getQuestion())
 
-class ThirdPage(QWidget):
+
+class AgreementPage(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        
+    def initUI(self):
+        
+        agreenentLbl = QLabel("실명 전체 공개에 동의하십니까?")
+
+        hBox = QHBoxLayout()
+        agreeBtn = QRadioButton('동의')
+        disagreeBtn = QRadioButton('비동의')
+        self.buttongroup = QButtonGroup(self)
+        self.buttongroup.addButton(agreeBtn, 1)
+        self.buttongroup.addButton(disagreeBtn, 2)
+        hBox.addWidget(agreeBtn)
+        hBox.addWidget(disagreeBtn)
+
+        nextBtn = QPushButton('next')
+        nextBtn.clicked.connect(self.resultPage)
+
+        vBox = QVBoxLayout()
+        vBox.addWidget(agreenentLbl)
+        vBox.addLayout(hBox)
+        vBox.addWidget(nextBtn)
+
+        self.setLayout(vBox)
+
+    #결과 페이지로 가기
+    def resultPage(self):
+        if self.buttongroup.checkedButton() == None:
+            return
+
+        if self.buttongroup.checkedId() == 2:
+            main.resultPage.chanegenAnonymous()
+        main.setCurrentIndex(main.currentIndex()+1) 
+
+
+
+
+class ResultPage(QWidget):
     def __init__(self):
         super().__init__()
         self.mbti = ''
@@ -266,6 +310,11 @@ class ThirdPage(QWidget):
     def setNameNumber(self, name, number):
         self.name = name
         self.number = number
+        self.nameLbl.setText(self.name)
+
+    def chanegenAnonymous(self):
+        self.name = self.name[0] + "O" + self.name[2:]
+        print(self.name)
         self.nameLbl.setText(self.name)
 
 
