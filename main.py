@@ -82,7 +82,6 @@ class NamePage(QWidget):
         vBox.addStretch(1)
         vBox.addLayout(hBttomBox)
         
-
         self.setLayout(vBox)
 
     def questionPage(self):

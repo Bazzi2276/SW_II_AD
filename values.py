@@ -101,6 +101,10 @@ class Values:
 
         return students
 
+    # 학생의 이름을 매개변수로 받아 학번 리턴
+    def findStudentNumber(self, name):
+        return self.savedNumber[name]
+
     # 이름, 학번, MBTI를 받아서 파일로 저장
     def saveStudentInfo(self, name, number, mbti):
         self.studentMBTI[name] = mbti
