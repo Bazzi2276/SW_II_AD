@@ -48,6 +48,7 @@ class Values:
         }
     
     savedMBTI = {}
+    savedNumber = {}
     
     def __init__(self):
         for mbti in self.mbtiList:
@@ -57,15 +58,26 @@ class Values:
             self.savedMBTI[mbti]["연예인"].add(name)
             
         try:
+            self.studentMBTI = {}
             with open('studentMBTI.txt', 'rb') as f:
                 self.studentMBTI = pickle.load(f)
         except FileNotFoundError as f:
             f = open("studentMBTI.txt", 'w')
             f.close()
-            self.studentMBTI = {}
+
+        try:
+            self.studentNumber = {}
+            with open('studentNumber.txt', 'rb') as f:
+                self.studentNumber = pickle.load(f)
+        except FileNotFoundError as f:
+            f = open("studentNumber.txt", 'w')
+            f.close()
     
         for name, mbti in self.studentMBTI.items():
             self.savedMBTI[mbti]["학생"].add(name)
+
+        for name, number in self.studentNumber.items():
+            self.savedNumber[name] = number
 
     # 매개변수의 MBTI와 잘 어울리는 MBTI들을 리스트로 리턴함
     def findSuitedMBTI(self, mbti):
@@ -89,11 +101,15 @@ class Values:
 
         return students
 
-    # 이름과 MBTI를 받아서 파일로 저장
-    def saveStudentMBTI(self, name, mbti):
+    # 이름, 학번, MBTI를 받아서 파일로 저장
+    def saveStudentInfo(self, name, number, mbti):
         self.studentMBTI[name] = mbti
         with open('studentMBTI.txt', 'wb') as f:
             pickle.dump(self.studentMBTI, f)
+
+        self.studentNumber[name] = number
+        with open('studentNumber.txt', 'wb') as f:
+            pickle.dump(self.studentNumber, f)
     
 
 # 테스트
@@ -103,8 +119,12 @@ if __name__ == '__main__':
     a = {"전현빈":"ISTJ", "김갑수":"ISFJ", "김철수":"ISTJ"}
     with open('studentMBTI.txt', 'wb') as f:
         pickle.dump(a, f)
+    b = {"전현빈":'20223134'}
+    with open('studentNumber.txt', 'wb') as f:
+        pickle.dump(b, f)
     
     print(values.savedMBTI)
+    print(values.savedNumber)
     print()
     print(values.findSuitedCelebrity("ISTJ"))
     print(values.findSuitedStudent("ESFP"))
