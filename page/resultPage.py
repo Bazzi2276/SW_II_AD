@@ -19,9 +19,9 @@ class ResultPage(QWidget):
     def initUI(self):
         vBox = QVBoxLayout()
 
-        label1 = QLabel("당신의 성격 유형은 :")
-        label1.setAlignment(Qt.AlignCenter)
-        label1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;")
+        self.label1 = QLabel(f"NAME님의 성격 유형은 :")
+        self.label1.setAlignment(Qt.AlignCenter)
+        self.label1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;")
 
         self.mbtiLbl = QLabel()
         self.mbtiLbl.setAlignment(Qt.AlignCenter)
@@ -33,7 +33,7 @@ class ResultPage(QWidget):
         self.iLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
         self.pbar1 = QProgressBar(self)
 
-        self.eLbl.move(40, 201)
+        self.eLbl.move(30, 201)
         eLbl2 = QLabel('E(외향형)', self)
         eLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         eLbl2.move(100, 170)
@@ -41,7 +41,7 @@ class ResultPage(QWidget):
         iLbl2 = QLabel('I(내향형)', self)
         iLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         iLbl2.move(640, 170)
-        self.iLbl.move(720, 201)
+        self.iLbl.move(710, 201)
 
         self.nLbl = QLabel(self)
         self.nLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
@@ -49,7 +49,7 @@ class ResultPage(QWidget):
         self.sLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
         self.pbar2 = QProgressBar(self)
 
-        self.nLbl.move(40, 266)
+        self.nLbl.move(30, 266)
         nLbl2 = QLabel('N(직관형)', self)
         nLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         nLbl2.move(100, 235)
@@ -57,7 +57,7 @@ class ResultPage(QWidget):
         sLbl2 = QLabel('S(현실형)', self)
         sLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         sLbl2.move(635, 235)
-        self.sLbl.move(720, 266)
+        self.sLbl.move(710, 266)
 
         self.tLbl = QLabel(self)
         self.tLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
@@ -65,7 +65,7 @@ class ResultPage(QWidget):
         self.fLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
         self.pbar3 = QProgressBar(self)
 
-        self.tLbl.move(40, 331)
+        self.tLbl.move(30, 331)
         tLbl2 = QLabel('T(이성적)', self)
         tLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         tLbl2.move(100, 300)
@@ -73,7 +73,7 @@ class ResultPage(QWidget):
         fLbl2 = QLabel('F(감정적)', self)
         fLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         fLbl2.move(635, 300)
-        self.fLbl.move(720, 331)
+        self.fLbl.move(710, 331)
 
         self.jLbl = QLabel(self)
         self.jLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
@@ -81,7 +81,7 @@ class ResultPage(QWidget):
         self.pLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 20pt;" "font-style: bold;")
         self.pbar4 = QProgressBar(self)
 
-        self.jLbl.move(40, 396)
+        self.jLbl.move(30, 396)
         jLbl2 = QLabel('J(계획형)', self)
         jLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         jLbl2.move(100, 365)
@@ -89,51 +89,57 @@ class ResultPage(QWidget):
         pLbl2 = QLabel('P(자율적)', self)
         pLbl2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" "font-style: bold;")
         pLbl2.move(635, 365)
-        self.pLbl.move(720, 396)
+        self.pLbl.move(710, 396)
 
         label2 = QLabel("나와 잘맞는 MBTI:")
         label2.setAlignment(Qt.AlignCenter)
         label2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 25pt;")
 
-        hbox5 = QHBoxLayout()
+        hBox1 = QHBoxLayout()
         self.suitedMbtiLbl_1 = QLabel()
         self.suitedMbtiLbl_1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 25pt;" "font-style: bold;")
         self.celebrity1 = QLabel()
-        self.celebrity1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
+        self.celebrity1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt; border-style: solid; border-width: 2px; border-color: #FF4081; border-radius: 3px;")
+        self.celebrity1.setAlignment(Qt.AlignCenter)
         self.student1 = QLabel()
-        self.student1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
-        hbox5.addStretch(1)
-        hbox5.addWidget(self.suitedMbtiLbl_1)
-        hbox5.addWidget(self.celebrity1)
-        hbox5.addWidget(self.student1)
-        hbox5.addStretch(1)
-        hbox5.setAlignment(Qt.AlignCenter)
+        self.student1.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt; border-style: solid; border-width: 2px; border-color: #FF4081; border-radius: 3px;")
+        self.student1.setAlignment(Qt.AlignCenter)
+        hBox1.addStretch(3)
+        hBox1.addWidget(self.suitedMbtiLbl_1)
+        hBox1.addStretch(1)
+        hBox1.addWidget(self.celebrity1)
+        hBox1.addStretch(1)
+        hBox1.addWidget(self.student1)
+        hBox1.addStretch(5)
             
-        hbox6 = QHBoxLayout()
+        hBox2 = QHBoxLayout()
         self.suitedMbtiLbl_2 = QLabel()
         self.suitedMbtiLbl_2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 25pt;" "font-style: bold;")
         self.celebrity2 = QLabel()
-        self.celebrity2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
+        self.celebrity2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt; border-style: solid; border-width: 2px; border-color: #FF4081; border-radius: 3px;")
+        self.celebrity2.setAlignment(Qt.AlignCenter)
         self.student2 = QLabel()
-        self.student2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
-        hbox6.addStretch(1)
-        hbox6.addWidget(self.suitedMbtiLbl_2)
-        hbox6.addWidget(self.celebrity2)
-        hbox6.addWidget(self.student2)
-        hbox6.addStretch(1)
-        hbox6.setAlignment(Qt.AlignCenter)
+        self.student2.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt; border-style: solid; border-width: 2px; border-color: #FF4081; border-radius: 3px;")
+        self.student2.setAlignment(Qt.AlignCenter)
+        hBox2.addStretch(3)
+        hBox2.addWidget(self.suitedMbtiLbl_2)
+        hBox2.addStretch(1)
+        hBox2.addWidget(self.celebrity2)
+        hBox2.addStretch(1)
+        hBox2.addWidget(self.student2)
+        hBox2.addStretch(5)
         
         vBox.addStretch(1)
-        vBox.addWidget(label1)
+        vBox.addWidget(self.label1)
         vBox.addStretch(1)
         vBox.addWidget(self.mbtiLbl)
-        vBox.addStretch(50)
+        vBox.addStretch(12)
         vBox.addWidget(label2)
         vBox.addStretch(2)
-        vBox.addLayout(hbox5)
+        vBox.addLayout(hBox1)
+        vBox.addStretch(1)
+        vBox.addLayout(hBox2)
         vBox.addStretch(4)
-        vBox.addLayout(hbox6)
-        vBox.addStretch(3)
         vBox.setAlignment(Qt.AlignCenter)
 
         self.setLayout(vBox)
@@ -151,7 +157,11 @@ class ResultPage(QWidget):
         self.number = ''
 
     def setDetermineMBTI(self):
+        self.main.values.saveStudentInfo(self.name, self.number, self.mbti)
+
         determineMBTI = self.main.determineMBTI
+
+        self.label1.setText(f"{self.name}님의 성격 유형은 : ")
 
         ePercent = int((determineMBTI.sum1 / 48) * 100)
         iPercent = 100 - ePercent
@@ -181,10 +191,18 @@ class ResultPage(QWidget):
         self.pbar4.setValue(max(jPercent, pPercent))
         self.pbar4.setInvertedAppearance(jPercent < pPercent)
 
-        self.suitedMbtiLbl_1.setText(self.main.values.findSuitedMBTI(self.mbti)[0])
-        self.suitedMbtiLbl_2.setText(self.main.values.findSuitedMBTI(self.mbti)[1])
-        self.celebrity1.setText(list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["연예인"])[0])
-        self.celebrity2.setText(list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[1]]["연예인"])[0])
+        self.suitedMbtiLbl_1.setText(self.main.values.findSuitedMBTI(self.mbti)[0] + " :")
+        self.suitedMbtiLbl_2.setText(self.main.values.findSuitedMBTI(self.mbti)[1] + " :")
+        self.celebrity1.setText("  " + list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["연예인"])[0] + "  ")
+        self.celebrity2.setText("  " + list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[1]]["연예인"])[0] + "  ")
 
-        self.student1.setText(', '.join(i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["학생"])))
-        self.student2.setText(', '.join(i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[1]]["학생"])))
+        s1 = [i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["학생"])]
+        for i in range(len(s1)):
+            s1[i] =  self.main.values.savedNumber[s1[i]] + ' ' + s1[i]
+
+        s2 = [i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[1]]["학생"])]
+        for i in range(len(s2)):
+            s2[i] =  self.main.values.savedNumber[s2[i]] + ' ' + s2[i]
+            
+        self.student1.setText('\n' + '\n'.join(s1) + '\n')
+        self.student2.setText("\n" + '\n'.join(s2) + "\n")

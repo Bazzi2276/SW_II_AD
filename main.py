@@ -13,6 +13,8 @@ from page.questionPage import QuestionPage
 from page.agreementPage import AgreementPage
 from page.resultPage import ResultPage
 
+import pickle
+
 class Main(QStackedWidget):
     def __init__(self):
         super().__init__()
@@ -49,5 +51,6 @@ if __name__ == "__main__":
 
     main = Main()
     main.add()
+
     app.exec_()
 

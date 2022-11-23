@@ -45,4 +45,4 @@ class AgreementPage(QWidget):
             self.main.resultPage.chanegenAnonymous()
 
         self.main.resultPage.setDetermineMBTI()        
-        self.main.setCurrentIndex(self.main.currentIndex()+1) 
+        self.main.setCurrentIndex(self.main.currentIndex()+1)

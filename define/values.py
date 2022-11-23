@@ -30,20 +30,20 @@ class Values:
     
     celebrityMBTI = {
         "차태현": "ISTJ",
-        "최강창민": "ISFJ",
+        "안영미": "ISFJ",
         "김종민": "ISTP",
         "유재석": "ISFP",
-        "태연": "INFJ",
+        "아이유": "INFJ",
         "손나은": "INTJ",
-        "선미": "INFP",
+        "민효린": "INFP",
         "이장원": "INTP",
-        "재현": "ESTP",
+        "정일훈": "ESTP",
         "전소민": "ESFP",
         "데프콘": "ESTJ",
-        "혜리": "ESFJ",
+        "박보검": "ESFJ",
         "전소미": "ENFP",
-        "제시": "ENTP",
-        "유나": "ENFJ",
+        "이찬혁": "ENTP",
+        "임시완": "ENFJ",
         "스윙스": "ENTJ"
         }
     
@@ -125,13 +125,6 @@ class Values:
 # 테스트
 if __name__ == '__main__':
     values = Values()
-
-    a = {"전현빈":"ISTJ", "김갑수":"ISFJ", "김철수":"ISTJ"}
-    with open('studentMBTI.txt', 'wb') as f:
-        pickle.dump(a, f)
-    b = {"전현빈":'20223134'}
-    with open('studentNumber.txt', 'wb') as f:
-        pickle.dump(b, f)
     
     print(values.savedMBTI)
     print(values.savedNumber)
