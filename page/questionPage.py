@@ -136,12 +136,6 @@ class QuestionPage(QWidget):
 
     def clickedNextButton(self):
 
-        # 모든 설문지를 완성했을 때 다음 페이지로 넘어가기 위한 설정
-        if self.question.getQuestionIdx() == 48:
-            self.main.resultPage.setMBTI(self.main.determineMBTI.mbtiCalc())
-            self.main.setCurrentIndex(self.main.currentIndex() + 1)
-            return
-
         # 모든 항목을 체크했을 때 다음 페이지로 넘어가게 하기 위한 설정
         if self.q1group.checkedButton() == None or self.q2group.checkedButton() == None or self.q3group.checkedButton() == None:
             return
@@ -162,6 +156,12 @@ class QuestionPage(QWidget):
         # self.q2group.setExclusive(True)
         # self.q3group.setExclusive(True) 
 
+        # 모든 설문지를 완성했을 때 다음 페이지로 넘어가기 위한 설정
+        if self.question.getQuestionIdx() == 48:
+            self.main.resultPage.setMBTI(self.main.determineMBTI.mbtiCalc())
+            self.main.setCurrentIndex(self.main.currentIndex() + 1)
+            return
+
         # 질문지 업데이트
         self.q1LblIdx = self.question.getQuestionIdx()
         self.q1Lbl.setText(self.question.getQuestion())
@@ -169,3 +169,4 @@ class QuestionPage(QWidget):
         self.q2Lbl.setText(self.question.getQuestion())
         self.q3LblIdx = self.question.getQuestionIdx()
         self.q3Lbl.setText(self.question.getQuestion())
+
