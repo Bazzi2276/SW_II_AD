@@ -153,13 +153,13 @@ class ResultPage(QWidget):
     def setDetermineMBTI(self):
         determineMBTI = self.main.determineMBTI
 
-        ePercent = int((determineMBTI.sum1 / 52) * 100)
+        ePercent = int((determineMBTI.sum1 / 48) * 100)
         iPercent = 100 - ePercent
-        nPercent = int((determineMBTI.sum2 / 52) * 100)
+        nPercent = int((determineMBTI.sum2 / 48) * 100)
         sPercent = 100 - nPercent
-        tPercent = int((determineMBTI.sum3 / 52) * 100)
+        tPercent = int((determineMBTI.sum3 / 48) * 100)
         fPercent = 100 - tPercent
-        jPercent = int((determineMBTI.sum4 / 52) * 100)
+        jPercent = int((determineMBTI.sum4 / 48) * 100)
         pPercent = 100 - jPercent
 
 
