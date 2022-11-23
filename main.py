@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QLineEdit, QRadioButton, QButtonGroup, QProgressBar, QGraphicsView, QGraphicsScene, QGraphicsProxyWidget
 from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QFont, QFontDatabase
 from qt_material import apply_stylesheet
 
 from define.questions import Question
@@ -17,7 +18,7 @@ class Main(QStackedWidget):
         super().__init__()
         self.initUI()
         self.show()
-
+        
     # UI 설정
     def initUI(self):
         self.move(600,100)
@@ -41,6 +42,11 @@ class Main(QStackedWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
+    fontDB = QFontDatabase()
+    fontDB.addApplicationFont('SeoulNamsanEB.ttf')
+    fontDB.addApplicationFont('SeoulNamsanB.ttf')
+
     main = Main()
     main.add()
     app.exec_()
