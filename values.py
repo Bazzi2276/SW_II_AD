@@ -22,10 +22,10 @@ class Values:
         "ESFP": ["ISFJ", "ISTJ"],
         "ESFJ": ["ISFP", "ISTP"],
         "ESTP": ["ISFJ", "ISTJ"],
-        "ISFP": ["ENFJ", "ESFJ", "ESTJ"],
+        "ISFP": ["ENFJ", "ESFJ"],
         "INTJ": ["ENFP", "ENTP"],
         "ISTP": ["ESFP", "ESTP"],
-        "ESTJ": ["ENTJ", "ISFP", "ISTP"]
+        "ESTJ": ["ENTJ", "ISTP"]
         }
     
     celebrityMBTI = {
