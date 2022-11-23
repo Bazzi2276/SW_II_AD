@@ -60,7 +60,10 @@ class Values:
         try:
             self.studentMBTI = {}
             with open('studentMBTI.txt', 'rb') as f:
-                self.studentMBTI = pickle.load(f)
+                try:
+                    self.studentMBTI = pickle.load(f)
+                except:
+                    pass
         except FileNotFoundError as f:
             f = open("studentMBTI.txt", 'w')
             f.close()
@@ -68,7 +71,10 @@ class Values:
         try:
             self.studentNumber = {}
             with open('studentNumber.txt', 'rb') as f:
-                self.studentNumber = pickle.load(f)
+                try:
+                    self.studentNumber = pickle.load(f)
+                except:
+                    pass
         except FileNotFoundError as f:
             f = open("studentNumber.txt", 'w')
             f.close()
