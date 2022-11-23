@@ -16,23 +16,42 @@ class AgreementPage(QWidget):
     def initUI(self):
         
         agreenentLbl = QLabel("실명 전체 공개에 동의하십니까?")
+        agreenentLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 40pt;" "font-style: bold;")
+        agreenentLbl.setAlignment((Qt.AlignCenter))
 
         hBox = QHBoxLayout()
         agreeBtn = QRadioButton('동의')
+        agreeBtn.setStyleSheet("QRadioButton::indicator""{""width : 100px;""height : 100px;""}")
         disagreeBtn = QRadioButton('비동의')
+        disagreeBtn.setStyleSheet("QRadioButton::indicator""{""width : 100px;""height : 100px;""}")
         self.buttongroup = QButtonGroup(self)
         self.buttongroup.addButton(agreeBtn, 1)
         self.buttongroup.addButton(disagreeBtn, 2)
+        hBox.addStretch(1)
         hBox.addWidget(agreeBtn)
+        hBox.addStretch(1)
         hBox.addWidget(disagreeBtn)
+        hBox.addStretch(1)
 
+        explainLbl = QLabel('비동의 선택 시 \'나의 MBTI와 잘 맞는 학부생\' 이름 칸에\n <홍O동>처럼 이름이 부분 표시됩니다.\n 또한 학번에 대한 정보는 표시되지 않습니다.')
+        explainLbl.setAlignment(Qt.AlignRight)
+        explainLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;" "font-style: bold;")
+
+        h2Box = QHBoxLayout()
         nextBtn = QPushButton('next')
         nextBtn.clicked.connect(self.resultPage)
+        h2Box.addStretch(1)
+        h2Box.addWidget(nextBtn)
 
         vBox = QVBoxLayout()
+        vBox.addStretch(2)
         vBox.addWidget(agreenentLbl)
+        vBox.addStretch(2)
         vBox.addLayout(hBox)
-        vBox.addWidget(nextBtn)
+        vBox.addStretch(1)
+        vBox.addWidget(explainLbl)
+        vBox.addStretch(4)
+        vBox.addLayout(h2Box)
 
         self.setLayout(vBox)
 
