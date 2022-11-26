@@ -39,7 +39,7 @@ class NamePage(QWidget):
         }
 
         uiGroups['content']['widget'][0].setAlignment(Qt.AlignCenter)
-        pixmap = QPixmap('쿠민.jpg')
+        pixmap = QPixmap('pyimage/쿠민.JPG')
         pixmap = pixmap.scaledToWidth(self.width() // 2)
         uiGroups['koomin']['widget'][0].setPixmap(pixmap)
         uiGroups['koomin']['widget'][0].setStyleSheet('border: 1px solid lightgray;')

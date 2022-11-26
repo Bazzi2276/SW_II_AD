@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QLineEdit, QRadioButton, QButtonGroup, QProgressBar, QGraphicsView, QGraphicsScene, QGraphicsProxyWidget
 from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QPixmap
 from qt_material import apply_stylesheet
 
 from define.questions import Question
@@ -14,6 +15,13 @@ class AgreementPage(QWidget):
         self.main = main
         
     def initUI(self):
+
+        imgLbl = QLabel()
+        pixmap = QPixmap('pyimage/koomin2.jpg')
+        pixmap = pixmap.scaledToWidth(self.width() // 2)
+        imgLbl.setPixmap(pixmap)
+        imgLbl.setStyleSheet('border: 1px solid lightgray;')
+        imgLbl.setAlignment(Qt.AlignCenter)
         
         agreenentLbl = QLabel("실명 전체 공개에 동의하십니까?")
         agreenentLbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 40pt;" "font-style: bold;")
@@ -44,6 +52,7 @@ class AgreementPage(QWidget):
         h2Box.addWidget(nextBtn)
 
         vBox = QVBoxLayout()
+        vBox.addWidget(imgLbl)
         vBox.addStretch(2)
         vBox.addWidget(agreenentLbl)
         vBox.addStretch(2)

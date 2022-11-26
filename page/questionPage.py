@@ -37,17 +37,17 @@ class QuestionPage(QWidget):
         q1Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"       #버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  #버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"    #버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "            #버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "       #클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "     #클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -55,34 +55,34 @@ class QuestionPage(QWidget):
         q1Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
         # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn3 = QRadioButton()
         q1Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -90,17 +90,17 @@ class QuestionPage(QWidget):
         q1Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -108,17 +108,17 @@ class QuestionPage(QWidget):
         q1Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
 
         self.q1group = QButtonGroup(self)
@@ -155,17 +155,17 @@ class QuestionPage(QWidget):
         q2Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -173,17 +173,17 @@ class QuestionPage(QWidget):
         q2Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -191,17 +191,17 @@ class QuestionPage(QWidget):
         q2Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -209,17 +209,17 @@ class QuestionPage(QWidget):
         q2Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -227,17 +227,17 @@ class QuestionPage(QWidget):
         q2Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
 
         self.q2group = QButtonGroup(self)
@@ -275,17 +275,17 @@ class QuestionPage(QWidget):
         q3Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -293,17 +293,17 @@ class QuestionPage(QWidget):
         q3Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonDisagree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+                             "{image: url(pyimage/radiobuttonDisagree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -311,17 +311,17 @@ class QuestionPage(QWidget):
         q3Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonCenter_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);}"
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
+                             "{image: url(pyimage/radiobuttonCenter_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -329,17 +329,17 @@ class QuestionPage(QWidget):
         q3Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
 
         # image: url 파일 위치에 따라 경로 변경해주기!
@@ -347,17 +347,17 @@ class QuestionPage(QWidget):
         q3Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
                              "QRadioButton::indicator::unchecked"  # 버튼 클릭 X 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:hover"  # 버튼 위에 마우스가 올라가있을 시
-                             "{image: url(C:/pyimage/radiobuttonAgree_unchecked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_unchecked.png);}"
                              "QRadioButton::indicator:unchecked:pressed"  # 버튼 누를 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator::checked "  # 버튼 클릭 됐을 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:hover "  # 클릭된 버튼 위에 마우스가 올라갈 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);}"
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
-                             "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
+                             "{image: url(pyimage/radiobuttonAgree_checked.png);")
 
         self.q3group = QButtonGroup(self)
         self.q3group.addButton(q3Btn1, 0)
