@@ -24,13 +24,15 @@ class QuestionPage(QWidget):
 
         self.q1LblIdx = self.question.getQuestionIdx()
         self.q1Lbl = QLabel(self.question.getQuestion())
-        self.q1Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
+        self.q1Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 15pt;")
         self.q1Lbl.setAlignment(Qt.AlignCenter)
 
         h1Box = QHBoxLayout()
         y1Lbl = QLabel('비동의')
         y1Lbl.setAlignment(Qt.AlignRight)
-        y1Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;")
+        y1Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;")
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn1 = QRadioButton()
         q1Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -47,6 +49,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "     #클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn2 = QRadioButton()
         q1Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -62,6 +66,8 @@ class QuestionPage(QWidget):
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);}"
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn3 = QRadioButton()
         q1Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
@@ -78,6 +84,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn4 = QRadioButton()
         q1Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -94,6 +102,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q1Btn5 = QRadioButton()
         q1Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -119,7 +129,7 @@ class QuestionPage(QWidget):
         self.q1group.addButton(q1Btn5, 4)
         n1Lbl = QLabel('동의')
         n1Lbl.setAlignment(Qt.AlignLeft)
-        n1Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;")
+        n1Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;")
         h1Box.addWidget(y1Lbl)
         h1Box.addWidget(q1Btn1)
         h1Box.addWidget(q1Btn2)
@@ -131,13 +141,16 @@ class QuestionPage(QWidget):
         # 두 번째 질문과 버튼들
         self.q2LblIdx = self.question.getQuestionIdx()
         self.q2Lbl = QLabel(self.question.getQuestion())
-        self.q2Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
+        self.q2Lbl.setStyleSheet('font-family: 서울남산체 B; font-size: 15pt;')
         self.q2Lbl.setAlignment(Qt.AlignCenter)
 
         h2Box = QHBoxLayout()
         y2Lbl = QLabel('비동의')
         y2Lbl.setAlignment(Qt.AlignRight)
-        y2Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;")
+        y2Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;")
+
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q2Btn1 = QRadioButton()
         q2Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -154,6 +167,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q2Btn2 = QRadioButton()
         q2Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -170,6 +185,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q2Btn3 = QRadioButton()
         q2Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
@@ -186,6 +203,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q2Btn4 = QRadioButton()
         q2Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -202,6 +221,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q2Btn5 = QRadioButton()
         q2Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -227,7 +248,7 @@ class QuestionPage(QWidget):
         self.q2group.addButton(q2Btn5, 4)
         n2Lbl = QLabel('동의')
         n2Lbl.setAlignment(Qt.AlignLeft)
-        n2Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;")
+        n2Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;")
         h2Box.addWidget(y2Lbl)
         h2Box.addWidget(q2Btn1)
         h2Box.addWidget(q2Btn2)
@@ -239,14 +260,17 @@ class QuestionPage(QWidget):
         # 세 번째 질문과 버튼들
         self.q3LblIdx = self.question.getQuestionIdx()
         self.q3Lbl = QLabel(self.question.getQuestion())
-        self.q3Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 15pt;")
+        self.q3Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 15pt;")
         self.q3Lbl.setAlignment(Qt.AlignCenter)
 
 
         h3Box = QHBoxLayout()
         y3Lbl = QLabel('비동의')
         y3Lbl.setAlignment(Qt.AlignRight)
-        y3Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;")
+        y3Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;")
+
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q3Btn1 = QRadioButton()
         q3Btn1.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -263,6 +287,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q3Btn2 = QRadioButton()
         q3Btn2.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -279,6 +305,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonDisagree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q3Btn3 = QRadioButton()
         q3Btn3.setStyleSheet("QRadioButton::indicator"
                              "{width: 30px; height: 30px;}"
@@ -295,6 +323,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonCenter_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q3Btn4 = QRadioButton()
         q3Btn4.setStyleSheet("QRadioButton::indicator"
                              "{width: 40px; height: 40px;}"
@@ -311,6 +341,8 @@ class QuestionPage(QWidget):
                              "QRadioButton::indicator:checked:pressed "  # 클릭된 버튼 클릭할 때
                              "{image: url(C:/pyimage/radiobuttonAgree_checked.png);")
 
+
+        # image: url 파일 위치에 따라 경로 변경해주기!
         q3Btn5 = QRadioButton()
         q3Btn5.setStyleSheet("QRadioButton::indicator"
                              "{width: 50px; height: 50px;}"
@@ -335,7 +367,7 @@ class QuestionPage(QWidget):
         self.q3group.addButton(q3Btn5, 4)
         n3Lbl = QLabel('동의')
         n3Lbl.setAlignment(Qt.AlignLeft)
-        n3Lbl.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" )
+        n3Lbl.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;" )
         h3Box.addWidget(y3Lbl)
         h3Box.addWidget(q3Btn1)
         h3Box.addWidget(q3Btn2)
@@ -347,7 +379,7 @@ class QuestionPage(QWidget):
         # next 페이지 버튼 UI
         hBttomBox = QHBoxLayout()
         nextPageBtn = QPushButton("next")
-        nextPageBtn.setStyleSheet("font-family: 08서울남산체 EB; font-size: 12pt;" )
+        nextPageBtn.setStyleSheet("font-family: 서울남산체 B; font-size: 12pt;" )
         nextPageBtn.clicked.connect(self.clickedNextButton)
         hBttomBox.addStretch(1)
         hBttomBox.addWidget(nextPageBtn)
