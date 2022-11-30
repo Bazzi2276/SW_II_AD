@@ -121,6 +121,9 @@ class Values:
         with open('studentNumber.txt', 'wb') as f:
             pickle.dump(self.studentNumber, f)
     
+    def testStudents(self):
+        for name, mbti in self.studentMBTI.items():
+            print(name + " " + mbti)
 
 # 테스트
 if __name__ == '__main__':

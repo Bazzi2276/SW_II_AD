@@ -51,6 +51,7 @@ if __name__ == "__main__":
 
     main = Main()
     main.add()
+    main.values.testStudents()
 
     app.exec_()
 
