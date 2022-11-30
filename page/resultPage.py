@@ -196,7 +196,7 @@ class ResultPage(QWidget):
         self.celebrity1.setText("  " + list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["연예인"])[0] + "  ")
         self.celebrity2.setText("  " + list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[1]]["연예인"])[0] + "  ")
 
-        s1 = [i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI("INFP")[0]]["학생"])]
+        s1 = [i for i in list(self.main.values.savedMBTI[self.main.values.findSuitedMBTI(self.mbti)[0]]["학생"])]
         for i in range(len(s1)):
             s1[i] =  self.main.values.savedNumber[s1[i]] + ' ' + s1[i]
 
