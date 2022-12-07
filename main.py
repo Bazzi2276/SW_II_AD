@@ -25,8 +25,9 @@ class Main(QStackedWidget):
     def initUI(self):
         self.move(600,100)
         self.setFixedSize(QSize(800, 900))
-        self.setWindowTitle('MBTI 검사지(아직 미정)')
+        self.setWindowTitle('소융대 MBTI 검사지')
         apply_stylesheet(app, theme = 'light_pink.xml')
+        self.setStyleSheet('background-color: rgb(240, 255,255 );')
     
     # stack에 다른 페이지들 추가
     def add(self):

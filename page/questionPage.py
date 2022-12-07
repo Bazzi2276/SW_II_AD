@@ -406,15 +406,15 @@ class QuestionPage(QWidget):
         self.main.determineMBTI.mbtiSum(self.q3LblIdx, self.q3group.checkedId())
 
         # 버튼 리셋
-        # self.q1group.setExclusive(False)
-        # self.q2group.setExclusive(False)
-        # self.q3group.setExclusive(False) 
-        # self.q1group.checkedButton().setChecked(False)
-        # self.q2group.checkedButton().setChecked(False)
-        # self.q3group.checkedButton().setChecked(False) 
-        # self.q1group.setExclusive(True)
-        # self.q2group.setExclusive(True)
-        # self.q3group.setExclusive(True) 
+        self.q1group.setExclusive(False)
+        self.q2group.setExclusive(False)
+        self.q3group.setExclusive(False) 
+        self.q1group.checkedButton().setChecked(False)
+        self.q2group.checkedButton().setChecked(False)
+        self.q3group.checkedButton().setChecked(False) 
+        self.q1group.setExclusive(True)
+        self.q2group.setExclusive(True)
+        self.q3group.setExclusive(True) 
 
         # 모든 설문지를 완성했을 때 다음 페이지로 넘어가기 위한 설정
         if self.question.getQuestionIdx() == 48:
